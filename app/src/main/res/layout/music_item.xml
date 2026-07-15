@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- 歌曲图片 -->
+    <ImageView
+        android:id="@+id/iv_ablumImg"
+        android:layout_width="110dp"
+        android:layout_height="101dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <!-- 中间信息布局 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="16dp">
+
+        <!-- 歌曲编号和名称的水平布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 歌曲编号 -->
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编号"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                />
+
+            <!-- 歌曲名称 -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="歌曲名称"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+
+        <!-- 歌曲作者 -->
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="歌曲作者"
+            android:textSize="14sp" />
+
+        <!-- 歌曲专辑 -->
+        <TextView
+            android:id="@+id/tv_ablum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="歌曲专辑"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <!-- 播放按钮（右侧垂直居中） -->
+    <ImageButton
+        android:id="@+id/btn_play"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:src="@android:drawable/ic_media_play"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="播放音乐"
+        android:scaleType="centerInside" />
+
+</LinearLayout>
